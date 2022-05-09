@@ -88,10 +88,13 @@ def processaCombinacao():
         indexNaLista = listaSubtraidos.index(ultimoNumeroDaLista)
         listaDeControle[len(listaDeControle) -1] = listaSubtraidos[indexNaLista +1]
 listaSubtraidos = []
-valor = input("digite o valor a ser inserido na lista :")
-while valor != 0 :
-    listaSubtraidos.append(valor)
-numeroASerSubtraido = 17
+while True :
+    valor = int(input("digite o valor a ser inserido na lista, '0' para sair: "))
+    if valor == 0:
+        break
+    else:
+        listaSubtraidos.append(valor)
+numeroASerSubtraido = int(input(" Digite o resultado da soma "))
 listaFinal = []
 listaDeControle = []
 tamMinListComRestoZero = 99999999
